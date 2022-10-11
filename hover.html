@@ -1,56 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hover effect</title>
     <style>
-        .main{
-            display: flex;
-        }
-        p{
-            border: 2px solid grey;
-            height: 2em;
-            width: auto;
-            margin: 1em;
-            padding: 1em;
-        }
-        .text-color{
-            color: black;
-        }
-        .text-color:hover{
-            color: brown;
-        }
-        .text-size:hover{
-            font-size: larger;            
-        }
-        .text-rotate:hover{
-            transform: rotate(20deg);        
-        }
-        .text-bg:hover{
-            background: #000;   
-            color: antiquewhite;         
-        }
+      .main {
+        display: flex;
+      }
+      p {
+        border: 2px solid grey;
+        height: 2em;
+        width: auto;
+        margin: 1em;
+        padding: 1em;
+      }
+      .text-color {
+        color: black;
+      }
+      .text-color:hover {
+        color: brown;
+      }
+      .text-size:hover {
+        font-size: larger;
+      }
+      .text-rotate:hover {
+        transform: rotate(20deg);
+      }
+      .text-bg:hover {
+        background: #000;
+        color: antiquewhite;
+      }
+      .button {
+        background-color: black;
+        color: aqua;
+        padding: 10px;
+        font: large;
+        cursor: pointer;
+      }
     </style>
-</head>
-<body>
-    <h2>    This is a simple exampple of hover effect in HTML and CSS.
-    </h2>
-    <hr>
-<div class="main">
-    <div class="obj1">
+  </head>
+  <body>
+    <h2>This is a simple exampple of hover effect in HTML and CSS.</h2>
+    <hr />
+    <div class="main">
+      <div class="obj1">
         <p class="text-color">Text color</p>
-    </div>
-    <div class="obj2">
+      </div>
+      <div class="obj2">
         <p class="text-size">Text size</p>
-    </div>
-    <div class="obj3">
+      </div>
+      <div class="obj3">
         <p class="text-rotate">Text rotate</p>
+      </div>
+      <div class="obj4"></div>
+      <p class="text-bg">Text bg</p>
     </div>
-    <div class="obj4"></div>
-    <p class="text-bg">Text bg</p>
-
-</div>
-</body>
+    <center>
+      <a href="/about.html">
+        <button class="button">Click Here</button>
+      </a>
+    </center>
+  </body>
 </html>
