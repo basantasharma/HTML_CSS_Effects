@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dummy Calender</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			ul {
+				list-style-type: none;
+			}
+			body {
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+			}
+			/*month header*/
+			.month {
+				padding: 70px 25px;
+				width: 100%;
+				background: #1abc9c;
+				text-align: center;
+			}
+			/*Month list*/
+			.month ul {
+				margin: 0;
+				padding: 0;
+			}
+			.month ul li {
+				color: white;
+				font-size: 20px;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+			}
+			/* previous button inside month header*/
+			.month .prev {
+				padding-top: 10px;
+				float: left;
+			}
+			/*next button*/
+			.month .next {
+				padding-top: 10px;
+				float: right;
+			}
+			.weekdays {
+				margin: 0;
+				padding: 10px 0;
+				background-color: #ddd;
+			}
+			.weekdays li {
+				display: inline-block;
+				width: 13.6%;
+				color: #666;
+				text-align: center;
+			}
+			.days {
+				padding: 10px 0;
+				background: #eee;
+				margin: 0;
+			}
+			.days li {
+				list-style-type: none;
+				display: inline-block;
+				text-align: center;
+				margin-bottom: 5px;
+				width: 13.6%;
+				color: #777;
+				font-size: 12px;
+			}
+
+			.days li .active {
+				padding: 5px;
+				background: #1abc9c;
+				color: white !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="month">
+			<ul>
+				<li class="prev">&#10094;</li>
+				<li class="next">&#10095;</li>
+				<li>MAY<br /><span style="font-size: 18px">2022</span></li>
+			</ul>
+		</div>
+		<ul class="weekdays">
+			<li>sunday</li>
+			<li>Monday</li>
+			<li>Tuesday</li>
+			<li>Wednesday</li>
+			<li>Thursday</li>
+			<li>Friday</li>
+			<li style="color: red">saturday</li>
+		</ul>
+		<ul class="days">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li><span class="active">4</span></li>
+			<li>5</li>
+			<li>6</li>
+			<li style="color: red">7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>
+			<li>13</li>
+			<li style="color: red">14</li>
+			<li>15</li>
+			<li>16</li>
+			<li>17</li>
+			<li>18</li>
+			<li>19</li>
+			<li>20</li>
+			<li style="color: red">21</li>
+			<li>22</li>
+			<li>23</li>
+			<li>24</li>
+			<li>25</li>
+			<li>26</li>
+			<li>27</li>
+			<li style="color: red">28</li>
+			<li>29</li>
+			<li>30</li>
+		</ul>
+	</body>
+</html>
