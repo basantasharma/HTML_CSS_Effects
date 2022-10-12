@@ -1,0 +1,42 @@
+<!DoCTYPE html>
+<html>
+    <head>
+        <title>naxacon</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="images/full-logo.png" class="logo">
+        <div class="content">
+            <h3>Website Is Under Construction</h3>
+            <h1>We are <span>Launching</span> Soon</h1>
+            <p id="Calcu"></p>
+             <a href="https://www.facebook.com/naxacon">
+            <button type="button">Learn More</button>
+             </a>
+        </div>
+    </div>
+    <img src="images/rocket.png" class="rocket">
+    
+</body>
+<script>
+      var countDownDate = new Date("Jan 1, 2023 00:00:00").getTime();
+      var x = setInterval(function() {
+          var now = new Date().getTime(); 
+          var distance = countDownDate - now;
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("Calcu").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        if (distance < 0){
+            clearInterval(x);
+            document.getElementById("Calcu").innerHTML = "Expired";
+        }
+      }, 1000);
+
+
+</script>
+</html>
