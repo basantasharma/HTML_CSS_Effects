@@ -3,7 +3,7 @@
 ### Live Preview
 - [Tic Tac Toe](https://basantasharma.github.io/HTML_CSS_Effects/TicTacToe/ttt-tic-tac-toe.html)
 - [Guess The Number](https://basantasharma.github.io/HTML_CSS_Effects/Guess-The-Number.html)
-- [CSS Animation1](https://basantasharma.github.io/HTML_CSS_Effects/CSS Animation1.html)
+- [CSS Animation1](https://basantasharma.github.io/HTML_CSS_Effects/CSS%20Animation1.html)
 
 Here you can find many HTML, CSS and Javascript generated awesome effects that you can use in your website.
 
