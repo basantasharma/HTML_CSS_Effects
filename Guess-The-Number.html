@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Guess the number</title>
+	<style type="text/css">
+		body{
+			margin:0;
+		}
+
+		#reveal{
+			background-color: red;
+			color: white;
+			height: 50px;
+			margin-left: 50px;
+		}
+
+		#paragraph{
+			margin-left: 10px; 
+		}
+
+		.compartment{
+			float: left;
+			margin-right: 50px;
+		}
+
+		##previousNumber{
+			margin-left: 50px;
+		}		
+
+		#inputFieldContainer{
+			float: left;
+			margin-right: 20px;
+		}
+
+		#indicatorContainer{
+			float: left;
+		}
+
+		#generator{
+			background-color: purple;
+			color: white;
+			height: 50px;
+			margin-right: 10px;
+
+		}
+
+		#resetButton{
+			background-color: #88B04B;
+			color: white;
+			height: 50px;
+		}
+
+		#checkButton{
+			background-color: #C3447A;
+			color: white;
+			height: 50px;
+		}
+
+		#input{
+			height: 30px;
+			width: 100px;
+			border: 5px solid black;
+		}
+
+		#container{
+			height: 100%;
+			width: 98%;
+			position: relative;
+  			border: 10px solid green;
+  			
+		}
+
+	#center{
+		padding-left: 5%;
+		padding-right: 5%
+	}
+
+		input{
+			width: 100px;
+		}
+		#left{
+			background-color: white;
+			width: 50px;
+			float: left;
+			margin-right: 20px;
+			height: 35px;
+
+			
+		}
+		#right{
+			background-color: white;
+			width: 50px;
+			float: left;
+			height: 35px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="container">
+		<div id="center">
+
+			<h1>A Game: Guess The Number</h1>
+			<button id="generator" onclick="generator()" >Generate A Random Number</button>
+			<button id="resetButton" onclick="reset()">Reset</button>
+			<br>
+			<br>
+			<div class="compartment">
+				<div id="inputFieldContainer">
+				<input id="input" type="number" min="10" max="99" name="" placeholder="Enter number">
+				</div>
+				<div id="indicatorContainer">
+				<div id="left">.</div>
+				<div id="right">.</div>
+			</div>
+			<div class="compartment" id="#previousNumber">
+				<p id="paragraph">Previous Tries:</p>
+			</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<button id="checkButton" onclick="check()">Check</button>
+			<button id="reveal" onclick="show()">Reveal The Number</button>
+			<br>
+			<br>
+			<h4 id="tries">Tries:</h4>
+			<h2>Rules</h2>
+			<p>First generate a two digits random number, then guess your first try and check it.
+			 <br>
+			Blue indicator means one of the number is correct irrespective of its place whereas green indicator means one number is correct as well as its position. 
+			<br>
+			Analyze the indicators and your guessing over time to create your logic to get the number right in a least amount of tries.</p>
+			<h3>Copyright &copy; Dev Kushal Pathak</h3>
+
+		</div>
+	</div>
+
+	
+
+<script type="text/javascript">
+	var counter = 0;
+	var leftColor = "white";
+	var rightColor = "white";
+	var random = undefined;
+	var randomLeft = 0;
+	var randomRight = 0;
+	var input = undefined;
+	var left = undefined;
+	var right = undefined;
+	var leftDiv = document.getElementById("left");
+	var rightDiv = document.getElementById("right");
+	var tries = document.getElementById("tries");
+	var paragraph = document.getElementById("paragraph");
+	var reveal = document.getElementById("reveal");
+	var isKnown = false;
+	var generatorButton = document.getElementById("generator");
+
+	function randomInt(min, max){
+		return(Math.floor(Math.random()*(max - min) + min));
+	}
+
+	function generator(){
+			 random = randomInt(10,99);
+			 randomLeft = Math.floor(random/10);
+			 randomRight = random % 10;
+			 generatorButton.style.border = "4px solid red";
+			 if(randomLeft == randomRight){
+			 	generator();
+			 }
+			//alert(random);
+	}
+
+	function reset(){
+		counter = 0;
+		leftColor = "white";
+		rightColor = "white";
+		random = undefined;
+		randomLeft = undefined;
+		randomRight = undefined;
+		input = undefined;
+		left = undefined;
+		right = undefined;
+		location.reload();
+	}
+
+	function show(){
+		reveal.innerHTML = random;
+		isKnown = true;
+	}
+
+	function check(){
+			 leftColor = "white";
+			 rightColor = "white";
+			 if (counter >= 15) {
+			 	alert("You loose! maximum tries is 15");
+			 }
+			 counter++;
+			 input = document.getElementById("input").value;
+			 	left = Math.floor(input/10);
+			 	right = input % 10;
+ 
+			if( left == randomLeft){
+				leftColor = "green";
+			}
+
+			if(right == randomRight && left != randomLeft){
+				leftColor = "green";
+			}
+			else if( right == randomRight && left == randomLeft){
+				leftColor = "green";
+				rightColor = "green";
+			}
+
+			if(left == randomRight && right != randomLeft){
+				leftColor = "blue";
+			}
+			else if(left != randomRight && right == randomLeft){
+				leftColor ="blue";
+			}
+			else if(left == randomRight && right == randomLeft){
+				leftColor = "blue";
+				rightColor = "blue";
+			}
+
+			leftDiv.style.backgroundColor = leftColor;
+			rightDiv.style.backgroundColor = rightColor;
+			tries.innerHTML = "Tries: " + counter;
+			paragraph.innerHTML += " " + input;
+			//alert(leftColor + " " + rightColor + " " + counter);
+			if (leftColor == "green" && rightColor == "green" && isKnown != true && counter == 1){
+				tries.innerHTML = "Congrats! you got it in " + counter + " try";
+			}
+			else if(leftColor == "green" && rightColor == "green" && isKnown == true && counter == 1){
+				tries.innerHTML = "You got it in " + counter + " try " + "by revealing the number :(";
+			}
+
+			else if (leftColor == "green" && rightColor == "green" && isKnown != true && counter > 1){
+				tries.innerHTML = "Congrats! you got it in " + counter + " tries";
+			}
+			else if(leftColor == "green" && rightColor == "green" && isKnown == true && counter > 1){
+				tries.innerHTML = "You got it in " + counter + " tries " + "by revealing the number :(";
+			}
+			
+
+	}
+
+</script>
+
+</body>
+</html>
