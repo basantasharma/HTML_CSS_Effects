@@ -1,37 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
-    <style>
-        .about {
-            color:red;
 
-        }
-        .about:hover{
-            color:green;
-            font-style: italic;
-        }
-        .button{
-            font-size: large;
-            color:green;
-            cursor: pointer;
-        }
-    </style>
-  </head>
-  <body>
-    <center>
-      <h1 class="about">About Page</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+
+
+    .about-section {
+      padding: 50px;
+      text-align: center;
+      background-color: #474e5d;
+      color: white;
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .container::after,
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: grey;
+    }
+
+    /*  */
+
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .button {
+      transition-duration: 0.4s;
+      background-color: #ffffff;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      padding: 14px 40px;
+
+    }
+
+    .button:hover {
+      background-color: #474e5d;
+      /* Green */
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <!-- <h1 class="about">About Page</h1>
     </br>
-      <p>About page is about the name of the authors</p>
-</br>
-<a href="/HTML_CSS_Effects/hover.html">
-    <button class="button">Click here!</button>
-</a>
-    </center>
-    
-   
-  </body>
+    <p>About page is about the name of the authors</p>
+    </br>
+    <a href="/HTML_CSS_Effects/hover.html">
+      <button class="button">Click here!</button>
+    </a> -->
+
+
+
+
+
+    <div class="about-section">
+      <h1>About Us Page</h1>
+      <p>Some text about who we are and what we do.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, possimus iste! At atque quia eos et
+        laboriosam aspernatur iure corrupti incidunt quam minima!</p>
+    </div>
+
+    <!-- <h2 style="text-align:center">Our Team</h2> -->
+    <h2>
+      <a href="/HTML_CSS_Effects/hover.html">
+        <button class="button">Click here!</button>
+      </a>
+    </h2>
+  </center>
+
+
+</body>
+
 </html>
