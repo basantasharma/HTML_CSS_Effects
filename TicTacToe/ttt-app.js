@@ -7,28 +7,28 @@ let gameOver = false;
 let count = 0;
 let turn = '';
 let winner = '';
-let resetBoxColor = function () {
+let resetBox = function () {
     for (box of boxes) {
-        box.style.backgroundColor = "darkGrey";
+        box.innerText = "";
     }
 }
 let resetTurn = function () {
     turn = '';
     displayTurn();
-    resetBoxColor();
+    resetBox();
     start.disabled = false;
     reset.disabled = true;
 }
 let newGame = function () {
-    resetBoxColor();
+    resetBox();
     data = [];
     count = 0;
     gameOver = false;
     let value = Math.floor(Math.random() * 10 + 1);
     if (value < 6) {
-        turn = 'Red';
+        turn = 'Orange';
     } else {
-        turn = 'Lime';
+        turn = 'Blue';
     }
     displayTurn();
     start.disabled = true;
@@ -45,10 +45,10 @@ let checkWinner = function () {
     if (data[2] === data[4] && data[2] === data[6]) return winner = data[2];
 }
 let changeTurn = function () {
-    if (turn === "Red") {
-        turn = "Lime";
+    if (turn === "Blue") {
+        turn = "Orange";
     } else {
-        turn = "Red";
+        turn = "Blue";
     }
 }
 let checkGameOver = function () {
@@ -66,12 +66,19 @@ let checkGameOver = function () {
 let displayTurn = function () {
     if (turn) {
         turnHeading.textContent = turn + "'s Turn";
-    }else{
+    } else {
         turnHeading.textContent = turn;
     }
 }
 let applyColor = function (box) {
-    box.style.backgroundColor = turn;
+    if (turn === "Blue") {
+        box.style.color = "#3581B8";
+        box.innerText = "X";
+    }
+    else {
+        box.style.color = "#FCB07E";
+        box.innerText = "O";
+    }
 }
 
 reset.disabled = true;
