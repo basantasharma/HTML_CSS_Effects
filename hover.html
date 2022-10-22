@@ -32,6 +32,17 @@
         background: #000;
         color: antiquewhite;
       }
+      .text-animate{
+          box-shadow: inset 0 0 0 0 #54b3d6;
+          color: #54b3d6;
+          margin: 0 -.25rem;
+          padding: 0 .25rem;
+          transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      }
+      .text-animate:hover{
+          box-shadow: inset 100px 0 0 0 #54b3d6;
+          color: white;
+      }
       .button {
         background-color: black;
         color: aqua;
@@ -55,6 +66,9 @@
         <p class="text-rotate">Text rotate</p>
       </div>
       <div class="obj4"></div>
+      <div class="obj5">
+        <p class="text-animate">Text Animate</p>
+      </div>
       <p class="text-bg">Text bg</p>
     </div>
     <center>
