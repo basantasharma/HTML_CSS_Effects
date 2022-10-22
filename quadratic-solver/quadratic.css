@@ -1,0 +1,222 @@
+.site-header {
+    background-color: rgba(0, 0, 0, 0.85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+  .heading
+  {  
+      text-align: center;
+  }
+  .container_wrapper
+  {
+      width: 90%;
+      height:auto;
+      display: flex;
+      margin: .5rem auto auto;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      padding: 2rem 0;
+  }
+ 
+/*quadraticbox*/
+.quadraticbox
+{
+  text-align: center;
+  box-shadow: 1px 2px 20px #2828288c;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+.quadeqbox
+{
+  display: block;
+}
+.dbox
+{
+  background: #7a7979;
+    color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.dbox p
+{
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+.resultbox
+{
+  margin-top: 1.2rem;
+  background: #ffbbed;
+    color: white;
+    padding: 0.7rem 1rem;
+        display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.xsmallbox
+{
+   font-size: 1.2rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.xcont
+{
+  margin: 0 0.3rem;
+  display: inline-block;
+    min-width: 9rem;
+    padding: 0.5rem 0.7rem;
+    background: crimson;
+    border-radius: 0.4rem;
+}
+.calcbtn
+{
+  margin: 1.4rem 0 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+}
+.delbtn
+{
+  float: right;
+}
+.footer
+{
+        position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #3c3c3c;
+    padding: 0.7rem;
+    color: white;
+    text-align: center;
+}
+.footer p
+{
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+.outerbox
+{
+  margin: 5rem 0;
+}
+input
+{
+  padding: 0.5rem;
+    border-radius: 0.4rem;
+    border: 1px solid #abaaaa;
+    width: 4rem;
+    text-align: center;
+}
+.eachbox
+{
+  margin-top: 1rem;
+}
+.entertext
+{
+      margin-bottom: 1rem;
+  color: grey;
+}
+.vboxvar
+{
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+    color: #999595;
+    font-weight: 700;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+*:focus {
+    outline: none;
+}
+
+  /*list style*/
+
+.liststyle
+{
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #e1e1e1;
+  list-style: inside;
+  padding-left: 0;
+}
+
+  /*list style ends*/
+
+
+
+
+  /*
+*----------------------------------------------------------------
+* HERO SECTION
+*----------------------------------------------------------------
+*/
+.hero-section {
+    background-color: var(--indigo);
+  }
+    
+  .hero-section__graphic,
+  .hero-section__graphic:before,
+  .hero-section__graphic:after {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 300px;
+    height: 200px;
+    border-radius: 40% 30% 30% 40% / 60% 40% 60% 40%;
+  }
+  
+  .hero-section__graphic:before,
+  .hero-section__graphic:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: float 10s infinite linear;
+  }
+  .hero-section__graphic:after {
+    animation-direction: reverse;
+    animation-delay: 500ms;
+  }
+  
+  .hero-section__icon {
+    fill: var(--light);
+    width: 100%;
+    height: auto;
+  } 
+
+  @keyframes float {
+    0% {
+      transform: translate(0%, 0%) rotate(0);
+    }
+  
+    33% {
+      transform: translate(2%, 2%) rotate(120deg);
+    }
+  
+    66% {
+      transform: translate(2%, -2%) rotate(240deg);
+    }
+  
+    to {
+      transform: translate(0%, 0%) rotate(360deg);
+    }
+  }
+
+
+  /* Testing */
+  img {
+    width: 135px;
+    height: 135px;
+     position: relative;
+     left: 83px;
+     top: 30px;
+  }

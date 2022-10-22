@@ -1,0 +1,129 @@
+:root {
+    --Dblack: #212121;
+    --Lblack: #323232;
+    --Dcyan: #0D7377;
+    --Lcyan: #14FFEC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--Dblack);
+}
+
+
+.container {
+    background-color: var(--Lblack);
+    margin: 0 auto;
+    width: 75%;
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container p {
+    text-align: center;
+    padding: 0.5rem;
+    color: white;
+    opacity: 0.8;
+    border-bottom: 2px solid white;
+    border-radius: 2rem;
+}
+
+#rock {
+    border-radius: 100%;
+}
+
+.flexbox-container {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    color: white;
+}
+
+.flexbox-container img {
+    margin-inline: 1rem;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.container h5 {
+    text-align: center;
+}
+
+.flexbox-container img {
+    height: 15vmin;
+}
+
+.flexbox-container img:hover {
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0px 0px 16px 2px var(--Lcyan);
+}
+
+#title {
+    text-align: center;
+    min-height: 2rem;
+    background-color: var(--Dcyan);
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 0 14px 2px var(--Lcyan);
+}
+
+footer {
+    text-align: center;
+    min-height: 2rem;
+    color: white;
+    font-size: 0.5rem;
+}
+
+#lastNote {
+    color: white;
+}
+
+.round {
+    border-radius: 100%;
+}
+
+#try-again {
+    border: 1px solid white;
+    background-color: var(--Dcyan);
+    text-align: center;
+}
+
+#try-again a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 432px) {
+    body {
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    body {
+        font-size: x-small;
+    }
+}
+
+@media only screen and (max-width: 200px) {
+    body {
+        font-size: 5vmin;
+    }
+}
+
+#paper {
+    border-radius: 100%;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Scissor paper rock</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="title">
+        <h2>Scissor, Paper, Rock</h2>
+      </div>
+      <div>
+      <div id="lastNote"></div>
+      <p id="hide-this">choose one:</p>
+      <div class="flexbox-container" id="flex-result">
+        <figure>
+          <img
+          src="./images/rock.png"
+          alt="rock"
+          class="rock"
+          id="rock"
+          onclick="humanChoice(this)"
+          title="rock"
+        />
+        </figure>
+        <figure>
+          <img
+          src="./images/paper.png"
+          alt="paper"
+          class="paper"
+          id="paper"
+          onclick="humanChoice(this)"
+          title="paper"
+          style="border-radius: 100%;"
+        />
+        </figure>
+        
+        <figure>
+          <img
+          src="./images/scissors.png"
+          alt="scissor"
+          class="scissor"
+          id="scissor"
+          onclick="humanChoice(this)"
+          title="scissor"
+        />
+        </figure>
+      </div>
+      <div id="try-again">
+      </div>
+    </div>
+      <footer>
+        <h1>By Nirajan Malla</h1>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
