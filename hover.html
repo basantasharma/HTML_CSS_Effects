@@ -50,6 +50,47 @@
         font: large;
         cursor: pointer;
       }
+      
+      
+      .text-animate2 {
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+    }
+
+    .text-animate2::before,
+    .text-animate2::after {
+       content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+  }
+  .text-animate2::before {
+        background-color: #54b3d6;
+        height: 2px;
+        bottom: 0;
+        transform-origin: 100% 50%;
+        transform: scaleX(0);
+        transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+   .text-animate2::after {
+      content: attr(data-replace);
+      height: 100%;
+      top: 0;
+      transform-origin: 100% 50%;
+      transform: translate3d(200%, 0, 0);
+      transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+      color: #54b3d6;
+}
+
+.text-animate2:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+.text-animate2:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
     </style>
   </head>
   <body>
@@ -70,6 +111,11 @@
         <p class="text-animate">Text Animate</p>
       </div>
       <p class="text-bg">Text bg</p>
+      
+      
+      <div class="obj6">
+        <p class="text-animate2">Text Animate</p>
+      </div>
     </div>
     <center>
       <a href="/HTML_CSS_Effects/about.html">
