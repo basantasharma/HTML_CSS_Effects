@@ -1,0 +1,117 @@
+body* {
+  background-color: white;
+}
+
+.rectangle {
+  margin: 1rem;
+  text-align: center;
+}
+
+.rec {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 150px;
+  padding: 1rem;
+  vertical-align: middle;
+  font-style: normal;
+  color: green;
+  margin-top: 50px;
+  -webkit-text-stroke: 6px rgb(1, 62, 1);
+}
+
+.re {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 150px;
+  padding: 1rem;
+  vertical-align: middle;
+  font-style: normal;
+  color: green;
+  margin-top: 50px;
+  -webkit-text-stroke: 6px rgb(1, 62, 1);
+}
+.rect {
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: 200;
+  font-style: var(29%);
+  font-size: 150px;
+  padding: 1rem;
+  vertical-align: middle;
+  font-style: normal;
+  color: green;
+  margin-top: 50px;
+  -webkit-text-stroke: 6px rgb(1, 62, 1);
+}
+.rectangl {
+  font-size: 3rem;
+  font-family: sans-serif;
+  font-style: normal;
+  text-align: center;
+  margin-top: -17%;
+  margin-left: 40%;
+  position: absolute;
+}
+
+.recta {
+  display: inline-block;
+  font-family: sans-serif;
+  border-radius: 30%;
+  font-size: 170px;
+  padding: 1rem;
+  vertical-align: middle;
+  font-style: normal;
+  color: green;
+  margin-top: 50px;
+  -webkit-text-stroke: 6px rgb(1, 62, 1);
+}
+
+#o-outer {
+  background-color: green;
+  border: 6px solid rgb(1, 62, 1);
+  height: 230px;
+  width: 230px;
+  border-radius: 50%;
+  position: relative;
+}
+
+#o-inner {
+  border: 6px solid rgb(1, 62, 1);
+  background-color: white;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: relative;
+  left: 59px;
+  top: 59px;
+}
+
+#t {
+  position: relative;
+  border-bottom: 85px solid rgb(255, 255, 255);
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 55px;
+  top: 90px;
+}
+
+#left-shade{
+    position: relative;
+    height: 65px;
+    width: 6px;
+    background-color: rgb(1, 62, 1);
+    transform: rotate(16.4deg);
+    top: 9.6px;
+    left: 7.75px;
+}
+#right-shade{
+    position: relative;
+    height: 65px;
+    width: 6px;
+    background-color: rgb(1, 62, 1);
+    transform: rotate(-16.5deg);
+    top: -60px;
+    left: 89.8px;
+}
