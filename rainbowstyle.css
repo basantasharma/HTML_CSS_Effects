@@ -1,0 +1,149 @@
+.sun {
+	margin-left: 50px;
+	margin-top: 20px;
+	display: inline-block;
+	border-radius: 50%;
+	height: 122px;
+	width: 122px;
+	background: orange;
+	box-shadow: 0 0 10px orange, 0 0 60px orange, 0 0 200px yellow,
+		inset 0 0 80px yellow;
+	z-index: 12;
+	align-items: center;
+	z-index: -99;
+}
+#moon {
+	width: 80px;
+	display: inline-block;
+	height: 80px;
+	margin-left: 1400px;
+	border-radius: 50%;
+	box-shadow: 15px 15px 0 0 white;
+}
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	background-image: linear-gradient(to right, #fa709a 0%, #0c0c0a 100%);
+}
+.container {
+	margin-top: 150px;
+}
+.box {
+	border: 1px solid black;
+	width: 1480px;
+	padding: 24px;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+#box1 {
+	background-color: red;
+	position: relative;
+	animation-name: bx1;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+@keyframes bx1 {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 1480px;
+		background-color: red;
+	}
+}
+#box2 {
+	background-color: orange;
+	position: relative;
+	animation-name: bx2;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+@keyframes bx2 {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 1480px;
+		background-color: orange;
+	}
+}
+#box3 {
+	background-color: yellow;
+	position: relative;
+	animation-name: bx3;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+@keyframes bx3 {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 1480px;
+		background-color: yellow;
+	}
+}
+#box4 {
+	background-color: green;
+	position: relative;
+	animation-name: bx4;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+@keyframes bx4 {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 1480px;
+		background-color: green;
+	}
+}
+#box5 {
+	background-color: blue;
+	position: relative;
+	animation-name: bx5;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+@keyframes bx5 {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 1480px;
+		background-color: blue;
+	}
+}
+#box6 {
+	background-color: indigo;
+	position: relative;
+	animation-name: bx6;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+@keyframes bx6 {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 1480px;
+		background-color: indigo;
+	}
+}
+#box7 {
+	background-color: violet;
+	position: relative;
+	animation-name: bx7;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+@keyframes bx7 {
+	from {
+		width: 0px;
+	}
+	to {
+		width: 1480px;
+		background-color: violet;
+	}
+}
