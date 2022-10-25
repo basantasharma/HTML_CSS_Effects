@@ -1,0 +1,44 @@
+.logo {
+	margin: auto;
+}
+.card {
+	margin: auto;
+	margin-top: 8%;
+	margin-bottom: 8%;
+	padding-top: 12px;
+}
+.card:hover {
+	transform: scale(1.02);
+	box-shadow: 3px 2px 20px -4px rgba(0, 0, 0, 0.75);
+}
+
+#select {
+	margin: 12px;
+	margin-bottom: 55px;
+}
+.btn {
+	margin: auto;
+}
+input {
+	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	margin: 0;
+}
+
+p {
+	font-family: 'Ubuntu', sans-serif;
+}
+.card-title {
+	font-family: 'Ubuntu', sans-serif;
+	margin-left: 16px;
+}
+.read {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.dropdown {
+	font-family: 'Ubuntu', sans-serif;
+}

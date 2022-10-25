@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="sachinstyle.css"
+		/>
+		<script src="sachinscript.js"></script>
+		<title>Electricity Bill Calculator</title>
+	</head>
+	<body
+		style="
+			background-image: linear-gradient(to right, #306377 0%, #88314e 100%);
+		"
+	>
+		<div
+			class="card"
+			style="width: 18rem"
+		>
+			<img
+				src="image-removebg-preview (11).png"
+				class="logo"
+				width="80px"
+				height="80px"
+				alt="..."
+			/>
+			<div class="card-body">
+				<h5 class="card-title">Electricity Bill Calculator</h5>
+				<div class="container">
+					<form action="">
+						<p class="read">Your Name:</p>
+						<input
+							class="box"
+							type="text"
+							id="name"
+						/>
+						<p class="read">Previous Reading(in KWh):</p>
+						<input
+							class="box"
+							type="number"
+							id="unit"
+							name="units"
+						/><br />
+						<p class="read">New Reading(in KWh):</p>
+						<input
+							class="box"
+							type="number"
+							id="unit1"
+							name="units1"
+						/><br />
+						<p class="read">Select your type:</p>
+						<select
+							name="select"
+							id="select"
+						>
+							<option
+								id="household"
+								class="dropdown"
+								value="household"
+							>
+								Household
+							</option>
+							<option
+								id="business"
+								class="dropdown"
+								value="business"
+							>
+								Business
+							</option>
+						</select>
+						<button
+							onclick="myFunction()"
+							class="btn btn-primary"
+						>
+							Calculate
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
