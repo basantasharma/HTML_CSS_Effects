@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>VanillaScroll</title>
+  </head>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-size: 5em;
+      font-family: "Montserrat";
+      font-weight: bold;
+      overflow-x: hidden;
+    }
+
+    section {
+      height: 100%;
+      overflow: hidden;
+      overflow-x: hidden;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      justify-content: center;
+      align-items: middle;
+      place-items: center;
+      height: 100vh;
+    }
+
+    span {
+      width: 110px;
+      height: 110px;
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background: black;
+      border-radius: 50%;
+    }
+  </style>
+  <body>
+    <section>
+      <ul>
+        <li class="scroll" data-rate="-2">Par</li>
+        <li>ral</li>
+        <li
+          class="scroll"
+          data-direction="horizontal"
+          data-rateY="2"
+          data-rateX="2"
+        >
+          lax
+        </li>
+      </ul>
+      <span
+        class="scroll"
+        data-direction="horizontal"
+        data-rateY="1"
+        data-rateX="2"
+      ></span>
+    </section>
+
+    <section></section>
+  </body>
+
+  <script>
+    window.addEventListener("scroll", function (e) {
+      const target = document.querySelectorAll(".scroll");
+
+      let length = target.length; //length is the number of elements in the array
+
+      for (let index = 0; index < length; index++) {
+        let position = window.pageYOffset * target[index].dataset.rate;
+        if (target[index].dataset.direction === "horizontal") {
+          positionX = window.pageYOffset * target[index].dataset.ratex;
+          positionY = window.pageYOffset * target[index].dataset.ratey;
+          target[index].style.transform =
+            "translate3d( " + positionX + "px," + positionY + "px, 0)";
+        } else {
+          target[index].style.transform =
+            "translate3d(0, " + position + "px, 0)";
+        }
+      }
+    });
+  </script>
+</html>
