@@ -1,0 +1,128 @@
+<!--WRITING CSS AND SCRIPTS IN SAME PAGE-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<title>Stopwatch</title>
+		<style>
+			.card-title {
+				font-size: 40px;
+				border: 1px solid black;
+				border-radius: 12px;
+				text-align: center;
+			}
+			.card {
+				height: 500px;
+				margin: auto;
+				margin-top: 6%;
+				margin-bottom: 12px;
+				box-shadow: 3px 2px 20px -4px rgba(0, 0, 0, 0.75);
+			}
+			.btn {
+				margin-top: 29px;
+			}
+			.card-img-top {
+				border-radius: 50%;
+				padding: 12px 12px 0px 12px;
+			}
+		</style>
+	</head>
+	<body
+		style="
+			background-image: linear-gradient(to right, #aa076b 0%, #61045f 100%); ;
+		"
+	>
+		<div
+			class="card"
+			style="width: 20rem"
+		>
+			<img
+				class="card-img-top"
+				src="https://media.publit.io/file/w_1000,h_1000,c_fit,q_80/websiteImages/phasergames/phaser_timers.png"
+				alt="Card image cap"
+				height="279px"
+			/>
+			<div class="card-body">
+				<h5 class="card-title">...</h5>
+				<div class="butn">
+					<a
+						href="#"
+						id="BT"
+						class="btn btn-primary"
+						>Start</a
+					>
+					<a
+						href="#"
+						id="bt"
+						class="btn btn-primary"
+						>Pause</a
+					>
+					<a
+						href="#"
+						id="btx"
+						class="btn btn-primary"
+						>Reset</a
+					>
+				</div>
+			</div>
+			<p style="font-style: italic">&copy;Created by Sachin Pantha</p>
+		</div>
+		<script>
+			let hr = 0;
+			let min = 0;
+			const Para = document.querySelector('.card-title');
+			const Btn = document.querySelector('#BT');
+			const pause = document.querySelector('#bt');
+			const reset = document.querySelector('#btx');
+			let num = 0;
+			let ms = 0;
+			let free;
+			const shownum = () => {
+				Para.innerHTML = 'Starting...';
+				free = setInterval(() => {
+					Para.innerHTML = `${hr}h:${min}m:${num}s:${ms}`;
+					ms++;
+					if (ms == 100) {
+						num++;
+						ms = 0;
+					}
+					if (num == 60) {
+						min++;
+						num = 0;
+					}
+					if (min == 60) {
+						hr++;
+						min = 0;
+						num = 0;
+					}
+				}, 10);
+			};
+			const setback = () => {
+				hr = 0;
+				min = 0;
+				num = 0;
+				ms = 0;
+				Para.innerHTML = `${hr}h:${min}m:${num}s:${ms}`;
+				document.querySelector(
+					'#para'
+				).innerHTML = `${hr}h:${min}m:${num}s:${ms}`;
+			};
+			Btn.addEventListener('click', shownum);
+			pause.addEventListener('click', () => {
+				Para.innerHTML = `${hr}h:${min}m:${num}s:${ms}`;
+				clearInterval(free);
+			});
+			reset.addEventListener('click', setback);
+		</script>
+	</body>
+</html>
