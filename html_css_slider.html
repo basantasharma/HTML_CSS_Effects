@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>responsive slider</title>
+	<style>
+	       body {
+	 padding: 1rem;
+	}
+
+	p {
+	 margin: 0 0 2rem;
+	}
+
+	/* customized slider */
+	.swiffy-slider {
+	 width: 1176px;
+	}
+
+	@media screen and (max-width: 767px) {
+	 .swiffy-slider {
+	 width: auto;
+	}
+	}
+	.slider-indicators {
+	 margin-bottom: -35px;
+	}
+	.slider-indicators > * {
+	 color: #fff;
+	 font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	 font-size: 14px;
+	 line-height: 1.4;
+	}
+	@media screen and (max-width: 767px) {
+	 .slider-indicators > * {
+	   font-size: 0px;
+	 }
+	}
+	.slider-indicators-square.slider-indicators > *,
+	.slider-indicators-square .slider-indicators > * {
+	 width: 22px;
+	 height: 21px;
+	 padding: 1px 0 0 0;
+	 background-color: #000;
+	 opacity: 1;
+	}
+	@media screen and (max-width: 767px) {
+	 .slider-indicators-square.slider-indicators > *,
+	 .slider-indicators-square .slider-indicators > * {
+	   background: #ccc;
+	   border-radius: 100%;
+	   width: 0.5rem;
+	   height: 0.5rem;
+	   overflow: hidden;
+	   border: 1px solid transparent;
+	   margin: 0 3px;
+	   margin-bottom: 20px;
+	   padding: 0;
+	 }
+	}
+
+	.slider-indicators > .active {
+	 opacity: 1;
+	 transition: background-color 0.3s ease;
+	}
+
+	.slider-indicators.archSlide > .active {
+	 background-color: #2346aa;
+	}
+
+	.slider-indicators.techSlide > .active {
+	 background-color: #FDE100;
+	 color: #000;
+	}
+	       
+	</style>
+</head>
+<body>
+	<div class="swiffy-slider slider-nav-arrow slider-nav-sm slider-nav-autoplay slider-nav-autopause slider-indicators-square slider-indicators-sm" data-slider-nav-autoplay-interval="4500">
+		<ul class="slider-container">
+			<li><img src="https://via.placeholder.com/1176x270/b2d8d8/b2d8d8?text=S"></li>
+			<li><img src="https://via.placeholder.com/1176x270/66b2b2/66b2b2?text=L"></li>
+			<li><img src="https://via.placeholder.com/1176x270/008080/008080?text=I"></li>
+			<li><img src="https://via.placeholder.com/1176x270/006666/006666?text=D"></li>
+			<li><img src="https://via.placeholder.com/1176x270/004c4c/004c4c?text=E"></li>
+		</ul><button class="slider-nav" type="button"></button> <button class="slider-nav slider-nav-next" type="button"></button>
+		<div class="slider-indicators archSlide">
+			<button class="active">1</button> <button>2</button> <button>3</button> <button>4</button> <button>5</button>
+		</div>
+	</div>
+</body>
+</html>
