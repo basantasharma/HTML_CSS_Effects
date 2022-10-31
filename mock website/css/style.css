@@ -1,0 +1,86 @@
+*{
+	font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+.main-nav ul li{
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.main-nav ul li a{
+	text-decoration: none;
+	color: white;
+	padding: 3px;
+}
+
+.main-header{
+	background-color: black;
+	height: 55px;
+	overflow: hidden;
+}
+
+.main-nav ul{
+	padding-top: 20px;
+}
+
+.main-nav ul li a:hover{
+	background-color: white;
+	color: black;
+}
+
+.logo-area{
+	display: inline-block;
+}
+
+.logo{
+	width: 50px;
+}
+
+.main-nav{
+	display: inline-block;
+	float: right;
+}
+
+h1{
+	text-align: center;
+	margin-top: 20px;
+}
+
+.reg-form{
+	text-align: center;
+	margin-top: 30px;
+}
+
+.reg-form input{
+	margin-bottom: 15px;
+	height: 1.6em;
+	padding: 3px;
+	border-radius: 10px;
+}
+
+.submit-btn{
+	padding: 5px 10px;
+	font-size: 1em;
+	background-color: #576F72;
+	color: white;
+	border-radius: 10px;
+}
+
+.submit-btn:hover{
+	background-color: #7D9D9C;
+	color: white;
+	cursor: pointer;
+	box-shadow: 1px 3px 5px black;
+}
+
+table, th, td{
+	border: 1px solid black;
+	margin:  20px 10%;
+}
+table{
+	width: 80%;
+}
+
